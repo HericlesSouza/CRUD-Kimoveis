@@ -26,8 +26,6 @@ export const loginService = async (loginData: TLogin): Promise<string> => {
         throw new AppError("Invalid credentials", 401);
     }
 
-    console.log("oDQJWUIDHWQIDWGQUYDHIQJi");
-
     const token = jwt.sign(
         {
             id: user.id,
