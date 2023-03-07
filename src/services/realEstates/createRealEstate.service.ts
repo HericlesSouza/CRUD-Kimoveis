@@ -18,6 +18,7 @@ export const createRealEstateService = async (realEstateData: TCreateRealEstate)
             throw new AppError("Category not found", 409);
         }
 
+
         category = ensureCategoryExists;
     }
 
@@ -44,6 +45,6 @@ export const createRealEstateService = async (realEstateData: TCreateRealEstate)
 
     const newRealEstate = realEstateRepository.create(newRealEstateData);
     await realEstateRepository.save(newRealEstate);
-    
+
     return realEstateSchema.parse(newRealEstate);
 };
