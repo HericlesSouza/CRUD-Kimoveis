@@ -42,7 +42,7 @@ const manySchedules = async () => {
 		city: "São Paulo",
 		street: "Rua das Rosas",
 		state: "SP",
-		zipCode: "000000011",
+		zipCode: "00000011",
 	});
 
 	const realEstate = await realEstateRepo.save({

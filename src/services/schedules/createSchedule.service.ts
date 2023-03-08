@@ -2,9 +2,8 @@ import { AppDataSource } from "../../data-source";
 import { RealEstate, Schedule, User } from "../../entities";
 import { AppError } from "../../errors";
 import { TCreateSchedule, TReturnSchedule } from "../../interfaces/schedules.interface";
-import { scheduleSchema } from "../../schemas/schedules.schema";
 
-export const createScheduleService = async (scheduleData: TCreateSchedule, userId: number): Promise<TReturnSchedule | any> => {
+export const createScheduleService = async (scheduleData: TCreateSchedule, userId: number): Promise<TReturnSchedule> => {
     const scheduleRepository = AppDataSource.getRepository(Schedule);
     const userRepository = AppDataSource.getRepository(User);
     const realEstateRepository = AppDataSource.getRepository(RealEstate);

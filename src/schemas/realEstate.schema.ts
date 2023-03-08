@@ -13,7 +13,7 @@ export const addressSchema = z.object({
 export const realEstateSchema = z.object({
     id: z.number(),
     sold: z.boolean().default(false),
-    value: z.string().regex(/^\d{1,10}(\.\d{1,2})?$/).or(z.number()),
+    value: z.string().or(z.number()),
     size: z.number().positive(),
     createdAt: z.string().or(z.date()),
     updatedAt: z.string().or(z.date()),
