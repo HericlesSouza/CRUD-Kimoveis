@@ -1,5 +1,6 @@
 import { getRounds, hashSync } from "bcryptjs";
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, BeforeInsert, BeforeUpdate } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, BeforeInsert, BeforeUpdate, OneToMany } from "typeorm";
+import { Schedule } from "./schedules.users.properties.entity";
 
 @Entity("users")
 export class User {
@@ -27,6 +28,9 @@ export class User {
     @DeleteDateColumn({ type: "date" })
     deletedAt: string;
 
+    @OneToMany(() => Schedule, schedule => schedule.user)
+    schedule?: Schedule[] | null | undefined | number;
+    
     @BeforeInsert()
     @BeforeUpdate()
     hashPassword() {
