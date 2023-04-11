@@ -50,9 +50,10 @@ yarn dev
 ## ⚙ Funcionalidades
 <ul>
     <li>Cadastro e modificação de usuários e imóveis.</li>
-    <li>Agendamentos de visitas a propriedades.</li>
-    <li>Login e autenticação jwt.</li>
-    <li>Criptografia de senha.</li>
+    <li>Agendamentos de visitas a imóveis.</li>
+    <li>Login e autenticação JWT.</li>
+    <li>Hash de senha</li>
+    <li>Soft delete</li>
 </ul>
 
 #
@@ -156,6 +157,9 @@ yarn dev
   <li>A rota pode ser acessada apenas por administradores.</li>
 </ul> 
 
+# Todos endpoints do serviço:
+
+![DER-Entrega5](./Endpoints.png)
 #
 ## Sobre os testes
 
