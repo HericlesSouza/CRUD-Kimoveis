@@ -11,7 +11,7 @@ Para inciar este projeto, é necessário instalar as dependências, que serão u
 
 ```bash
 # caso use npm
-npm run i
+npm install
 
 # caso use yarn
 yarn
